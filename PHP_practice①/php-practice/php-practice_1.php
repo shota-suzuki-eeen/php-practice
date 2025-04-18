@@ -56,7 +56,11 @@ foreach ($prefecture as $value) {
 }
 
 // Q8 連想配列-2
-
+foreach ($prefecture as $key => $value) {
+  if ($key === "埼玉県") {
+    echo $key . "の県庁所在地は、" . $value . "です。";
+  }
+}
 
 // Q9 連想配列-3
 
