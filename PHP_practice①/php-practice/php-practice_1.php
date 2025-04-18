@@ -5,7 +5,7 @@ echo "私の名前は「" . $myName . "」です。";
 
 // Q2 四則演算
 $num = 5 * 4;
-echo " " . $num . "\n";
+echo $num . "\n";
 echo $num / 2;
 
 // Q3 日付操作
@@ -51,8 +51,7 @@ $prefecture = [
 ];
 
 foreach ($prefecture as $value) {
-  echo $value;
-  echo "\n";
+  echo $value . "\n";
 }
 
 // Q8 連想配列-2
@@ -72,7 +71,13 @@ foreach ($prefecture as $key => $value) {
 }
 
 // Q10 関数-1
+function hello($name)
+{
+  echo $name . "さん、こんにちは。\n";
+}
 
+hello("金谷");
+hello("安藤");
 
 // Q11 関数-2
 
