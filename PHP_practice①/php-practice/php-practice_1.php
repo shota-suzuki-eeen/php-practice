@@ -80,7 +80,15 @@ hello("金谷");
 hello("安藤");
 
 // Q11 関数-2
+function calcTaxInPrice($price)
+{
+  $tax = $price + ($price * 0.1);
+  return $price . "円の商品の税込価格は" . $tax . "円です。";
+}
 
+$price = 1000;
+$taxInPrice = calcTaxInPrice($price);
+echo $taxInPrice;
 
 // Q12 関数とif文
 
