@@ -63,7 +63,13 @@ foreach ($prefecture as $key => $value) {
 }
 
 // Q9 連想配列-3
-
+foreach ($prefecture as $key => $value) {
+  if ($key === "愛知県" || $key === "大阪府") {
+    echo $key . "は関東地方ではありません。\n";
+  } else {
+    echo $key . "の県庁所在地は、" . $value . "です。\n";
+  }
+}
 
 // Q10 関数-1
 
