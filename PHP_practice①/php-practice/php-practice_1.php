@@ -9,10 +9,10 @@ echo " " . $num . "\n";
 echo $num / 2;
 
 // Q3 日付操作
-
+$date_time = date("Y年m月d日 H時i分s秒");
+echo "現在時刻は、" . $date_time . "です。";
 
 // Q4 条件分岐-1 if文
-
 
 // Q5 条件分岐-2 三項演算子
 
