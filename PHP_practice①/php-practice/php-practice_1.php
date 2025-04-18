@@ -4,7 +4,9 @@ $myName = '鈴木';
 echo "私の名前は「". $myName . "」です。";
 
 // Q2 四則演算
-
+$num = 5 * 4;
+echo " " . $num . "\n";
+echo $num / 2;
 
 // Q3 日付操作
 
