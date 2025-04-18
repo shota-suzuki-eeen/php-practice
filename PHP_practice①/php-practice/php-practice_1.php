@@ -1,7 +1,7 @@
 <?php
 // Q1 変数と文字列
 $myName = '鈴木';
-echo "私の名前は「". $myName . "」です。";
+echo "私の名前は「" . $myName . "」です。";
 
 // Q2 四則演算
 $num = 5 * 4;
@@ -15,21 +15,25 @@ echo "現在時刻は、" . $date_time . "です。";
 // Q4 条件分岐-1 if文
 $device = 'windows';
 
-if( $device !== 'windows' && 'mac')
-{
-    echo "どちらでもありません。";
+if ($device !== 'windows' && 'mac') {
+  echo "どちらでもありません。";
 }
-if( $device === 'windows')
-{
-    echo "使用OSは、windowsです。";
+if ($device === 'windows') {
+  echo "使用OSは、windowsです。";
 }
-if( $device === 'mac')
-{
-    echo "使用OSは、macです。";
+if ($device === 'mac') {
+  echo "使用OSは、macです。";
 }
 
 // Q5 条件分岐-2 三項演算子
+$age = 26;
 
+if ($age < 18) {
+  echo "未成年です。";
+}
+if ($age >= 18) {
+  echo "成人です。";
+}
 
 // Q6 配列
 
@@ -53,6 +57,3 @@ if( $device === 'mac')
 
 
 // Q13 関数とswitch文
-
-
-?>
