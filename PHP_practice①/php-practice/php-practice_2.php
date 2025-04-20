@@ -43,6 +43,13 @@ foreach ($personalInfos as $index => $person) {
 }
 
 // 問題3
+$ageList = [25, 30, 18];
+
+foreach ($personalInfos as $index => &$person) {
+  $person['age'] = $ageList[$index];
+}
+unset($person);
+var_dump($personalInfos);
 
 // Q3 オブジェクト-1
 
