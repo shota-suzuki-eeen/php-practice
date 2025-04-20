@@ -37,6 +37,11 @@ $personalInfos = [
 echo $personalInfos[1]['name'] . "の電話番号は" . $personalInfos[1]['tel'] . "です。\n";
 
 // 問題2
+foreach ($personalInfos as $index => $person) {
+  $num = $index + 1;
+  echo $num . "番目の" . $person['name'] . "のメールアドレスは" . $person['mail'] . "で、電話番号は" . $person['tel'] . "です。\n";
+}
+
 // 問題3
 
 // Q3 オブジェクト-1
