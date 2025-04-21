@@ -94,3 +94,10 @@ $yamada = new Student2(120, '山田');
 $yamada->attend('PHP');
 
 // Q5 定義済みクラス
+// 問題１
+$datetime = new DateTime();
+
+$datetime->modify('-1 month');
+echo $datetime->format('Y-m-d');
+
+// 問題２
