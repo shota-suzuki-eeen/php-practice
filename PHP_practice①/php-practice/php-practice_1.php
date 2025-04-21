@@ -9,31 +9,23 @@ echo $num . "\n";
 echo $num / 2;
 
 // Q3 日付操作
-$date_time = date("Y年m月d日 H時i分s秒");
-echo "現在時刻は、" . $date_time . "です。";
+$dateTime = date("Y年m月d日 H時i分s秒");
+echo "現在時刻は、" . $dateTime . "です。";
 
 // Q4 条件分岐-1 if文
 $device = 'windows';
 
-if ($device !== 'windows' && 'mac') {
-  echo "どちらでもありません。";
-}
 if ($device === 'windows') {
   echo "使用OSは、windowsです。";
 }
-if ($device === 'mac') {
-  echo "使用OSは、macです。";
+else {
+  echo ($device === 'mac')?"使用OSは、macです。":"どちらでもありません";
 }
 
 // Q5 条件分岐-2 三項演算子
 $age = 26;
 
-if ($age < 18) {
-  echo "未成年です。";
-}
-if ($age >= 18) {
-  echo "成人です。";
-}
+echo ($age < 18)?"未成年です。":"成人です。";
 
 // Q6 配列
 $prefecture = ["茨城県", "栃木県", "群馬県", "埼玉県", "千葉県", "東京都", "神奈川県"];
@@ -47,26 +39,26 @@ $prefecture = [
   "埼玉県" => "さいたま市",
   "千葉県" => "千葉市",
   "東京都" => "新宿区",
-  "神奈川県" => "横浜市"
+  "神奈川県" => "横浜市",
 ];
 
-foreach ($prefecture as $value) {
-  echo $value . "\n";
+foreach ($prefecture as $city) {
+  echo $city . "\n";
 }
 
 // Q8 連想配列-2
-foreach ($prefecture as $key => $value) {
-  if ($key === "埼玉県") {
-    echo $key . "の県庁所在地は、" . $value . "です。";
+foreach ($prefecture as $pref => $city) {
+  if ($pref === "埼玉県") {
+    echo $pref . "の県庁所在地は、" . $city . "です。";
   }
 }
 
 // Q9 連想配列-3
-foreach ($prefecture as $key => $value) {
-  if ($key === "愛知県" || $key === "大阪府") {
-    echo $key . "は関東地方ではありません。\n";
+foreach ($prefecture as $pref => $city) {
+  if ($pref === "愛知県" || $pref === "大阪府") {
+    echo $pref . "は関東地方ではありません。\n";
   } else {
-    echo $key . "の県庁所在地は、" . $value . "です。\n";
+    echo $pref . "の県庁所在地は、" . $city . "です。\n";
   }
 }
 
@@ -83,12 +75,12 @@ hello("安藤");
 function calcTaxInPrice($price)
 {
   $tax = $price + ($price * 0.1);
-  return $price . "円の商品の税込価格は" . $tax . "円です。";
+  return $tax;
 }
 
 $price = 1000;
-$taxInPrice = calcTaxInPrice($price);
-echo $taxInPrice;
+$tax = calcTaxInPrice($price);
+echo $price . "円の商品の税込価格は" . $tax . "円です。";
 
 // Q12 関数とif文
 function distinguishNum($Num)
