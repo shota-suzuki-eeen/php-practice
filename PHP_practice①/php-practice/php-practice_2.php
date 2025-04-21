@@ -101,3 +101,7 @@ $datetime->modify('-1 month');
 echo $datetime->format('Y-m-d');
 
 // 問題２
+$date = new DateTime('1992-03-02');
+
+$interval = $date->diff($datetime);
+echo "あの日から" . $interval->format('%a 日') . "経過しました。";
